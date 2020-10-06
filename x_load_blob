@@ -1,0 +1,23 @@
+create or replace PROCEDURE       "x_LOAD_BLOB" (v_filename in varchar2) as
+
+v_thumbnail blob;
+l_bfile Bfile;
+l_id number;
+l_filename varchar2(40);
+l_file varchar2(9);
+begin
+
+dbms_output.put_line(v_filename);
+
+SELECT substr(NVL(SUBSTR(v_filename, 0, INSTR(v_filename, '%')-1), v_filename),3) into l_id from dual;dbms_output.put_line(l_id);
+SELECT filename  into l_filename  FROM  x_ATTACHMENTS where id=l_id;
+update x_attachMENTs set thumbs=empty_blob() where id=l_id;
+select thumbS into v_thumbnail from x_Attachments where id=l_id;
+dbms_output.put_line(dbms_lob.getlength(v_thumbnail));
+l_bfile := bfilename ('SRC_FILES', v_filename);dbms_lob.fileopen (l_bfile);   --SRC_FILES oracle direcotyr
+dbms_lob.loadfromfile(v_thumbnail, l_bfile, dbms_lob.getlength(l_bfile));
+dbms_lob.fileclose(l_bfile);
+/*select substr(v_filename,INSTR(v_filename, '%')+1,9) into l_file from dual;
+if l_file='signature' then update x_WORKORDER set DIGITAL_SIGNATURE='Y' 
+where x_id=(select x_id from x_attachments where  id=l_id);end if;*/
+end;

@@ -16,6 +16,7 @@ Rquirements
            Oracle Directory with read/write permissions
            O/S script                                         img.sh
            O/S password file                                  img_db.txt
+           Oracle Attachment Table
 
              
  Dirctory Structure

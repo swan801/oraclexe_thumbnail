@@ -1,3 +1,38 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@swan801 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+swan801
+/
+oraclexe_thumbnail
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+oraclexe_thumbnail/img.sh
+@swan801
+swan801 Create img.sh
+Latest commit de6c27a 1 minute ago
+ History
+ 1 contributor
+99 lines (82 sloc)  3.09 KB
+  
 #!/bin/sh
 
 
@@ -75,15 +110,15 @@ echo $JPG >> $LOG/img.sh
 ID=`echo $JPG | sed 's/\%[^%]*$//'`
 echo "begin"  >> $SRC/$ID.sh
 case "$JPG" in
- W*) echo "fms_load_blob('${JPG}');" >> $SRC/$ID.sh
+ W*) echo "x_load_blob('${JPG}');" >> $SRC/$ID.sh
 ;;
- E*) echo "fms_eoc_load_blob('${JPG}');"  >> $SRC/$ID.sh
+ E*) echo "x_eoc_load_blob('${JPG}');"  >> $SRC/$ID.sh
 ;;
- P*) echo "fms_pm_load_blob('${JPG}');"  >> $SRC/$ID.sh
+ P*) echo "x_pm_load_blob('${JPG}');"  >> $SRC/$ID.sh
 ;;
- C*) echo "fms_ck_load_blob('${JPG}');"  >> $SRC/$ID.sh
+ C*) echo "x_ck_load_blob('${JPG}');"  >> $SRC/$ID.sh
 ;;
- J*) echo "fms_prj_load_blob('${JPG}');"  >> $SRC/$ID.sh
+ J*) echo "x_prj_load_blob('${JPG}');"  >> $SRC/$ID.sh
 ;;
 
 esac
@@ -97,3 +132,15 @@ exit;
 EOF
 rm -rf $ID
 done
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About

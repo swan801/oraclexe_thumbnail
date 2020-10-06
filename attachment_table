@@ -1,0 +1,19 @@
+Table	Column	Data Type	Length	Precision	Scale	Primary Key	Nullable	Default	Comment
+x_ATTACHMENTS	ID	NUMBER	22	-	-	-	nullable	-	-
+ 	x_ID	NUMBER	22	-	-	-	nullable	-	-
+ 	FILE_BLOB	BLOB	4000	-	-	-	nullable	-	-
+ 	FILE_MIMETYPE	VARCHAR2	512	-	-	-	nullable	-	-
+ 	FILENAME	VARCHAR2	4000	-	-	-	nullable	-	-
+ 	UPDATED	TIMESTAMP(6)	11	-	6	-	nullable	-	-
+ 	UPDATED_BY	VARCHAR2	255	-	-	-	nullable	-	-
+ 	THUMBS	BLOB	4000	-	-	-	nullable	-	-
+ 	EXT	VARCHAR2	200	-	-	-	nullable	-	-
+ 	FILE_COMMENTS	VARCHAR2	4000	-	-	-	nullable	-	-
+ 	FILE_CHARSET	VARCHAR2	512	-	-	-	nullable	-	-
+ 	ROW_VERSION_NUMBER	NUMBER	22	-	-	-	nullable	-	-
+ 	TAGS	VARCHAR2	4000	-	-	-	nullable	-	-
+ 	CREATED	TIMESTAMP(6)	11	-	6	-	nullable	-	-
+ 	CREATED_BY	VARCHAR2	255	-	-	-	nullable	-	-
+ 	SHORT_NAME	VARCHAR2	50	-	-	-	nullable	-	-
+ 	x_CO	NUMBER	22	-	-	-	nullable	-	-
+ 	MULTI	CHAR	1	-	-	-	nullable	-	-
